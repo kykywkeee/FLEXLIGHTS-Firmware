@@ -4,63 +4,140 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Flexlights Firmware</title>
+
   <style>
     body {
       font-family: Arial, sans-serif;
-      max-width: 760px;
+      max-width: 820px;
       margin: 40px auto;
       padding: 0 20px;
-      line-height: 1.6;
       color: #222;
+      line-height: 1.5;
     }
 
     h1 {
-      font-size: 32px;
-      margin-bottom: 10px;
+      margin-bottom: 8px;
+      font-size: 34px;
     }
 
-    .button {
-      display: inline-block;
-      margin: 20px 0;
-      padding: 12px 18px;
-      background: #0969da;
-      color: white;
-      text-decoration: none;
-      border-radius: 8px;
+    .subtitle {
+      margin-top: 0;
+      color: #555;
+      font-size: 18px;
+    }
+
+    .firmware-list {
+      margin-top: 32px;
+    }
+
+    .firmware-item {
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      padding: 16px;
+      margin-bottom: 14px;
+    }
+
+    .firmware-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+    }
+
+    .firmware-name {
+      font-size: 18px;
       font-weight: bold;
     }
 
-    .note {
-      background: #fff8c5;
-      padding: 14px;
-      border-radius: 8px;
-      margin-top: 20px;
+    .download {
+      background: #0969da;
+      color: white;
+      text-decoration: none;
+      padding: 9px 14px;
+      border-radius: 7px;
+      font-weight: bold;
+      white-space: nowrap;
+    }
+
+    details {
+      margin-top: 12px;
+    }
+
+    summary {
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    .changes {
+      margin-top: 10px;
+      color: #333;
+    }
+
+    .instructions {
+      margin-top: 36px;
+      border-top: 1px solid #ddd;
+      padding-top: 20px;
     }
   </style>
 </head>
+
 <body>
   <h1>Flexlights Firmware</h1>
+  <p class="subtitle">Official firmware releases for Flexlights controller.</p>
 
-  <p>Official firmware releases for Flexlights controller.</p>
+  <div class="firmware-list">
+    <div class="firmware-item">
+      <div class="firmware-row">
+        <div class="firmware-name">FLEXLIGHTS Firmware v1.1</div>
+        <a class="download" href="https://github.com/kykywkeee/FLEXLIGHTS-Firmware/releases/download/v1.1/flexlights_v1.1.bin">Download</a>
+      </div>
 
-  <a class="button" href="https://github.com/kykywkeee/flexlights-firmware/releases/latest">
-    Download latest firmware
-  </a>
+      <details>
+        <summary>What's new?</summary>
+        <div class="changes">
+          1. Motion sensor sensitivity has been changed. The device now reacts to movement more smoothly.
 
-  <h2>How to download</h2>
+2. Back up your images and playlists. Use Backup to save your files before sharing and syncing with your friends’ devices. 
 
-  <p>Open the latest release and download the <strong>.bin</strong> file from Assets.</p>
+3. Each device now have a group number. Syncing, image uploads, and other commands will only work inside the selected group. 
 
-  <div class="note">
-    Do not download "Source code (zip)" or "Source code (tar.gz)".
-    These files are generated automatically by GitHub and are not firmware.
+4. Press the light bulb icon next to a device to highlight it.
+
+5. Press the X icon next to a device to turn it off.
+
+6. You can turn off only one device using the button, instead of turning off the whole group. Press 3 times and hold.
+
+7. Your device now keeps the connection automatically. If you see “Connection lost”, first check that the device is turned on, then check the Wi-Fi connection. If everything is okay, the page should refresh automatically. If it does not, refresh the page manually.
+
+8. Some phones can access the internet while connected to the device’s Wi-Fi network. 
+
+9. Optimization has been improved, and the page now loads faster.
+
+10. Found bugs and errors have been fixed.
+        </div>
+      </details>
+    </div>
+
+    <div class="firmware-item">
+      <div class="firmware-row">
+        <div class="firmware-name">FLEXLIGHTS Firmware v1.0</div>
+        <a class="download" href="https://github.com/kykywkeee/FLEXLIGHTS-Firmware/releases/download/v1.0/flexlights_v1.0.bin">Download</a>
+      </div>
+
+      <details>
+        <summary>What's new?</summary>
+        <div class="changes">
+          First public firmware release.
+        </div>
+      </details>
+    </div>
   </div>
 
-  <h2>All releases</h2>
-
-  <p>
-    You can find all firmware versions on the
-    <a href="https://github.com/kykywkeee/flexlights-firmware/releases">GitHub Releases page</a>.
-  </p>
+  <div class="instructions">
+    <h2>How to download / install</h2>
+    <p>
+      Write download and installation instructions here.
+    </p>
+  </div>
 </body>
 </html>
